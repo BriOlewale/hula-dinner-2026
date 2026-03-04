@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>150th Missionary Anniversary Corporate Dinner – Hula Village 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #0b0620;
+      --purple:  #1a0a3e;
+      --mid:     #2d1260;
+      --gold:    #d4af37;
+      --gold2:   #f0d060;
+      --gold3:   #a07820;
+      --teal:    #00c9d4;
+      --white:   #ffffff;
+      --cream:   #f8f0d8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ─── Decorative ornament line ─────────────────────────────── */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: center;
+      margin: 1rem auto;
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      flex: 1;
+      max-width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .ornament-diamond {
+      width: 8px; height: 8px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ─── HERO ─────────────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 60px 20px 80px;
+    }
+
+    /* Layered background */
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 100%, #2d125080 0%, transparent 70%),
+        radial-gradient(ellipse 120% 80% at 50% 0%,  #1a0a3e 0%, #0b0620 60%);
+      z-index: 0;
+    }
+
+    /* Animated rings */
+    .hero-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(212,175,55,0.12);
+      animation: pulse-ring 6s ease-in-out infinite;
+      z-index: 0;
+    }
+    .hero-ring:nth-child(1) { width: 500px; height: 500px; animation-delay: 0s; }
+    .hero-ring:nth-child(2) { width: 750px; height: 750px; animation-delay: 1.5s; }
+    .hero-ring:nth-child(3) { width: 1000px; height: 1000px; animation-delay: 3s; }
+
+    @keyframes pulse-ring {
+      0%, 100% { transform: scale(1);   opacity: 0.5; }
+      50%       { transform: scale(1.05); opacity: 0.2; }
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+      letter-spacing: 0.35em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .badge-wrap {
+      margin: 0 auto 28px;
+      width: clamp(180px, 28vw, 280px);
+      filter: drop-shadow(0 0 30px rgba(212,175,55,0.5));
+      animation: float 4s ease-in-out infinite;
+    }
+    .badge-wrap img { width: 100%; display: block; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--gold2);
+      text-shadow: 0 0 40px rgba(212,175,55,0.4), 0 2px 4px rgba(0,0,0,0.8);
+      margin-bottom: 6px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .hero-location {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.85rem, 2vw, 1.1rem);
+      letter-spacing: 0.25em;
+      color: var(--teal);
+      text-transform: uppercase;
+    }
+
+    .hero-tagline {
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin: 28px auto 0;
+      line-height: 1.7;
+    }
+
+    /* ─── QUICK INFO BAR ───────────────────────────────────────── */
+    #info-bar {
+      background: linear-gradient(135deg, var(--mid) 0%, #1a0a50 100%);
+      border-top: 1px solid rgba(212,175,55,0.3);
+      border-bottom: 1px solid rgba(212,175,55,0.3);
+      padding: 30px 20px;
+    }
+
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .info-item {
+      flex: 1 1 200px;
+      text-align: center;
+      padding: 20px 30px;
+      position: relative;
+    }
+    .info-item + .info-item::before {
+      content: '';
+      position: absolute; left: 0; top: 20%; height: 60%;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(212,175,55,0.4), transparent);
+    }
+
+    .info-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .info-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--gold3);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .info-value {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+      font-weight: 600;
+      color: var(--gold2);
+      line-height: 1.4;
+    }
+
+    /* ─── SECTIONS shared ──────────────────────────────────────── */
+    section { padding: 90px 20px; }
+
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: var(--teal);
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      font-weight: 700;
+      text-align: center;
+      color: var(--gold2);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .section-body {
+      font-family: 'Crimson Pro', serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.8;
+      color: rgba(255,255,255,0.82);
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ─── ABOUT / STORY ────────────────────────────────────────── */
+    #about {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--purple) 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      max-width: 1100px;
+      margin: 60px auto 0;
+      align-items: center;
+    }
+
+    .about-image-frame {
+      position: relative;
+    }
+    .about-image-frame img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      filter: sepia(20%) brightness(0.95);
+    }
+    .about-image-frame::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+    .about-image-frame::after {
+      content: '';
+      position: absolute;
+      inset: -18px;
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .about-text .section-title,
+    .about-text .section-label,
+    .about-text .section-body { text-align: left; margin-left: 0; }
+
+    .about-text .section-title { margin-bottom: 20px; }
+
+    .about-text blockquote {
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--gold2);
+      border-left: 3px solid var(--gold);
+      padding-left: 20px;
+      margin: 28px 0;
+      line-height: 1.7;
+    }
+
+    /* ─── PORTRAIT SECTION ─────────────────────────────────────── */
+    #legacy {
+      background: var(--purple);
+      position: relative;
+      overflow: hidden;
+    }
+    #legacy::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 30% 50%, rgba(0,201,212,0.06) 0%, transparent 70%);
+    }
+
+    .legacy-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 70px;
+      max-width: 1100px;
+      margin: 60px auto 0;
+      align-items: center;
+      position: relative;
+    }
+
+    .portrait-frame {
+      position: relative;
+      text-align: center;
+    }
+    .portrait-img-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .portrait-img-wrap img {
+      width: 260px;
+      height: 320px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 2px;
+      display: block;
+      margin: 0 auto;
+      filter: sepia(30%) contrast(1.05);
+    }
+    .portrait-border {
+      position: absolute;
+      inset: -12px;
+      border: 1px solid rgba(212,175,55,0.5);
+      border-radius: 2px;
+    }
+    .portrait-border2 {
+      position: absolute;
+      inset: -22px;
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 2px;
+    }
+    .portrait-caption {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-top: 22px;
+    }
+    .portrait-caption small {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    .legacy-text .section-title,
+    .legacy-text .section-label,
+    .legacy-text .section-body { text-align: left; margin-left: 0; }
+    .legacy-text .section-body { max-width: none; }
+
+    /* ─── EVENT DETAILS ────────────────────────────────────────── */
+    #details {
+      background: linear-gradient(180deg, var(--purple) 0%, var(--navy) 100%);
+    }
+
+    .details-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 50px auto 0;
+    }
+
+    .detail-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 8px;
+      padding: 36px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .detail-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,175,55,0.6);
+    }
+    .detail-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .detail-card-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .detail-card-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .detail-card-value {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      color: var(--gold2);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .detail-card-sub {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 6px;
+    }
+
+    /* Price highlight card */
+    .detail-card.featured {
+      border-color: rgba(212,175,55,0.6);
+      background: linear-gradient(145deg, rgba(212,175,55,0.1), rgba(212,175,55,0.03));
+    }
+    .detail-card.featured .detail-card-value {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      color: var(--gold2);
+      text-shadow: 0 0 20px rgba(212,175,55,0.5);
+    }
+
+    /* ─── PURPOSE BANNER ───────────────────────────────────────── */
+    #purpose {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--mid) 0%, #0d0035 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #purpose::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .purpose-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .purpose-inner .section-title { color: var(--white); }
+
+    .purpose-box {
+      margin: 40px auto 0;
+      border: 1px solid rgba(212,175,55,0.4);
+      border-radius: 6px;
+      padding: 48px 50px;
+      position: relative;
+      background: rgba(0,0,0,0.25);
+    }
+    .purpose-box::before, .purpose-box::after {
+      content: '✦';
+      position: absolute;
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+    .purpose-box::before { top: 14px; left: 14px; }
+    .purpose-box::after  { bottom: 14px; right: 14px; }
+
+    .purpose-box p {
+      font-family: 'Crimson Pro', serif;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      line-height: 1.85;
+      color: rgba(255,255,255,0.88);
+    }
+    .purpose-box .highlight {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--gold2);
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    /* ─── MENU ─────────────────────────────────────────────────── */
+    #menu {
+      background: var(--navy);
+      padding: 80px 20px;
+    }
+
+    .menu-plate {
+      max-width: 600px;
+      margin: 50px auto 0;
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 8px;
+      padding: 50px 40px;
+      text-align: center;
+      background: linear-gradient(145deg, rgba(255,255,255,0.04), transparent);
+      position: relative;
+    }
+    .menu-plate::before {
+      content: '';
+      position: absolute; inset: 6px;
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 5px;
+      pointer-events: none;
+    }
+
+    .menu-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .menu-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      color: var(--gold2);
+      margin-bottom: 10px;
+    }
+    .menu-desc {
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+    }
+    .menu-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .menu-items li {
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.75);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(212,175,55,0.1);
+    }
+    .menu-items li:last-child { border-bottom: none; }
+    .menu-items li .dot {
+      color: var(--teal);
+      margin-right: 8px;
+    }
+
+    /* ─── MEMORIAL IMAGE STRIP ─────────────────────────────────── */
+    #gallery {
+      padding: 0;
+      overflow: hidden;
+    }
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 420px;
+    }
+    .gallery-panel {
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .gallery-panel:hover img { transform: scale(1.04); }
+    .gallery-panel-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(11,6,32,0.85) 0%, rgba(11,6,32,0.1) 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px 32px;
+    }
+    .gallery-panel-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--gold2);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    .gallery-panel-sub {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── CTA / RSVP ───────────────────────────────────────────── */
+    #contact {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--mid) 50%, var(--navy) 100%);
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    #contact::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,175,55,0.07) 0%, transparent 70%);
+    }
+
+    .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-headline {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--gold2);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .cta-sub {
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 50px;
+    }
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .contact-card {
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 10px;
+      padding: 34px 24px;
+      background: rgba(255,255,255,0.04);
+      transition: transform 0.3s, background 0.3s, border-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      background: rgba(212,175,55,0.08);
+      border-color: rgba(212,175,55,0.6);
+    }
+
+    .contact-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      color: var(--cream);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .contact-name .title-prefix {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--teal);
+      margin-bottom: 4px;
+    }
+
+    .contact-phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 11px 22px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .contact-phone-btn:hover { opacity: 0.88; transform: scale(1.04); }
+    .contact-phone-btn svg { width: 18px; height: 18px; fill: #fff; }
+
+    .cta-main-btn {
+      display: inline-block;
+      padding: 18px 54px;
+      background: linear-gradient(135deg, var(--gold3) 0%, var(--gold) 50%, var(--gold3) 100%);
+      background-size: 200% auto;
+      color: var(--navy);
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-position 0.4s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 25px rgba(212,175,55,0.35);
+    }
+    .cta-main-btn:hover {
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(212,175,55,0.5);
+    }
+
+    .rsvp-note {
+      margin-top: 30px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em;
+    }
+    .rsvp-note strong { color: rgba(255,255,255,0.65); }
+
+    /* ─── FOOTER ────────────────────────────────────────────────── */
+    footer {
+      background: #060310;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+
+    .footer-badge {
+      width: 90px;
+      margin: 0 auto 20px;
+      opacity: 0.85;
+    }
+    .footer-badge img { width: 100%; display: block; }
+
+    .footer-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .footer-sub {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.1em;
+    }
+    .footer-divider {
+      width: 60px; height: 1px;
+      background: rgba(212,175,55,0.3);
+      margin: 20px auto;
+    }
+    .footer-copy {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── Sticky RSVP pill ──────────────────────────────────────── */
+    .sticky-rsvp {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 100;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+    .sticky-rsvp.visible { opacity: 1; transform: translateY(0); }
+    .sticky-rsvp a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--gold3), var(--gold));
+      color: var(--navy);
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(212,175,55,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .sticky-rsvp a:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 32px rgba(212,175,55,0.6);
+    }
+
+    /* ─── Responsive ────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .about-grid, .legacy-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .legacy-grid { grid-template-columns: 1fr; }
+      .about-text .section-title,
+      .about-text .section-label,
+      .about-text .section-body,
+      .legacy-text .section-title,
+      .legacy-text .section-label,
+      .legacy-text .section-body { text-align: center; }
+      .about-text blockquote { text-align: left; }
+      .gallery-strip { grid-template-columns: 1fr; height: auto; }
+      .gallery-panel { height: 280px; }
+      .info-item + .info-item::before { display: none; }
+      .purpose-box { padding: 36px 24px; }
+      .sticky-rsvp { bottom: 16px; right: 16px; }
+    }
+
+    /* ─── Scroll reveal ─────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+  </style>
+</head>
+<body>
+
+  <!-- ── STICKY RSVP PILL ─────────────────────────────────────── -->
+  <div class="sticky-rsvp" id="stickyRsvp">
+    <a href="#contact">✉ RSVP Now</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HERO                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hula Village, Papua New Guinea</p>
+
+      <div class="badge-wrap">
+        <img src="badge_right.png" alt="150th Anniversary Badge" />
+      </div>
+
+      <h1 class="hero-title">Missionary Anniversary</h1>
+      <p class="hero-subtitle">Corporate Dinner</p>
+      <p class="hero-location">150 Years · 1876 – 2026</p>
+
+      <div class="ornament">
+        <div class="ornament-diamond"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-diamond"></div>
+      </div>
+
+      <p class="hero-tagline">
+        "Remembering the people who sacrificed their lives<br />
+        to bring the Gospel to our shores."
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- INFO BAR                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="info-bar">
+    <div class="info-grid">
+      <div class="info-item reveal">
+        <span class="info-icon">📅</span>
+        <div class="info-label">Date</div>
+        <div class="info-value">Saturday<br />25th April 2026</div>
+      </div>
+      <div class="info-item reveal reveal-delay-1">
+        <span class="info-icon">🕕</span>
+        <div class="info-label">Time</div>
+        <div class="info-value">6:00 PM – 10:00 PM</div>
+      </div>
+      <div class="info-item reveal reveal-delay-2">
+        <span class="info-icon">📍</span>
+        <div class="info-label">Venue</div>
+        <div class="info-value">Sir John Guise<br />Sports Complex</div>
+      </div>
+      <div class="info-item reveal reveal-delay-3">
+        <span class="info-icon">🍽️</span>
+        <div class="info-label">Menu</div>
+        <div class="info-value">Local Cuisine<br />(All Seafood)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABOUT                                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-image-frame reveal">
+        <img src="memorial.png" alt="Dr W.G. Lawes Memorial Stone, Vula'a Iruna" />
+      </div>
+      <div class="about-text">
+        <p class="section-label reveal">Our Story</p>
+        <h2 class="section-title reveal">A Century &amp; A Half<br />of Faith</h2>
+        <div class="ornament" style="justify-content:flex-start; margin-left:0;">
+          <div class="ornament-diamond"></div><div class="ornament-diamond"></div>
+        </div>
+        <p class="section-body reveal" style="text-align:left; margin-left:0; max-width:none;">
+          In 1876, the London Missionary Society arrived at the shores of Hula Village. Reverend Dr W.G. Lawes and his fellow missionaries braved uncharted waters to carry the message of the Gospel to Papua New Guinea's coastline — planting seeds of faith that have grown for 150 years.
+        </p>
+        <blockquote class="reveal">
+          "A legacy built on sacrifice, service, and the unyielding<br />hope of those who came before us."
+        </blockquote>
+        <p class="section-body reveal" style="text-align:left; margin-left:0; max-width:none;">
+          Today, as we stand at the threshold of a remarkable sesquicentennial, we honour their memory — and look forward to a week-long celebration of faith, culture, and community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LEGACY / PORTRAIT                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="legacy">
+    <p class="section-label reveal">In Memoriam</p>
+    <h2 class="section-title reveal">Honouring the Pioneers</h2>
+    <div class="ornament">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+
+    <div class="legacy-grid">
+      <div class="portrait-frame reveal">
+        <div class="portrait-img-wrap">
+          <img src="portrait.png" alt="Dr W.G. Lawes" />
+          <div class="portrait-border"></div>
+          <div class="portrait-border2"></div>
+        </div>
+        <p class="portrait-caption">
+          Dr W.G. Lawes
+          <small>London Missionary Society · 1876</small>
+        </p>
+      </div>
+
+      <div class="legacy-text">
+        <p class="section-label reveal">The Dr W.G. Lawes Memorial Stone</p>
+        <h3 class="section-title reveal" style="font-size:clamp(1.3rem,3vw,2rem);">Vula'a Iruna</h3>
+        <div class="ornament" style="justify-content:flex-start;margin-left:0;">
+          <div class="ornament-diamond"></div><div class="ornament-diamond"></div>
+        </div>
+        <p class="section-body reveal" style="text-align:left;margin:20px 0;max-width:none;">
+          The Vula'a Iruna Memorial Stone stands at Hula Village as an enduring testament to the selfless mission of Dr W.G. Lawes and those who followed him. It marks a sacred place where the first seeds of the Christian faith were sown on Papua New Guinea's southern coast.
+        </p>
+        <p class="section-body reveal" style="text-align:left;margin:0;max-width:none;">
+          This Corporate Dinner is more than a fundraising event — it is a gathering of gratitude, remembrance, and hope, as we unite to celebrate 150 years of that transformative legacy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- EVENT DETAILS                                               -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="details">
+    <p class="section-label reveal">Event Details</p>
+    <h2 class="section-title reveal">The Corporate Dinner</h2>
+    <div class="ornament">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+
+    <div class="details-cards">
+      <div class="detail-card reveal">
+        <div class="detail-card-icon">📅</div>
+        <div class="detail-card-label">Date</div>
+        <div class="detail-card-value">Saturday<br />25th April 2026</div>
+      </div>
+      <div class="detail-card reveal reveal-delay-1">
+        <div class="detail-card-icon">🕕</div>
+        <div class="detail-card-label">Time</div>
+        <div class="detail-card-value">6:00 PM<br />— 10:00 PM</div>
+      </div>
+      <div class="detail-card reveal reveal-delay-2">
+        <div class="detail-card-icon">📍</div>
+        <div class="detail-card-label">Venue</div>
+        <div class="detail-card-value">Sir John Guise<br />Sports Complex</div>
+        <div class="detail-card-sub">Port Moresby, Papua New Guinea</div>
+      </div>
+      <div class="detail-card reveal reveal-delay-3">
+        <div class="detail-card-icon">🍽️</div>
+        <div class="detail-card-label">Menu</div>
+        <div class="detail-card-value">Local Cuisine<br />(All Seafood)</div>
+        <div class="detail-card-sub">Featuring the finest coastal flavours</div>
+      </div>
+      <div class="detail-card featured reveal reveal-delay-4">
+        <div class="detail-card-icon">🎟️</div>
+        <div class="detail-card-label">Table Booking</div>
+        <div class="detail-card-value">Table for Ten (10)<br />K 5,000.00</div>
+        <div class="detail-card-sub">per table · inclusive of dinner</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- PURPOSE                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="purpose">
+    <div class="purpose-inner">
+      <p class="section-label reveal">Why Your Support Matters</p>
+      <h2 class="section-title reveal">Purpose of this Event</h2>
+      <div class="ornament">
+        <div class="ornament-diamond"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-diamond"></div>
+      </div>
+      <div class="purpose-box reveal">
+        <p>
+          Funds raised at the Corporate Dinner will go directly towards the
+          <strong style="color:var(--gold2);">150th Missionary Anniversary Celebration</strong>,
+          a landmark week-long programme of cultural, spiritual, and community events
+          that will bring together people from across Papua New Guinea and beyond.
+        </p>
+        <span class="highlight">
+          Anniversary Celebration Week<br />
+          Tuesday 23rd – Saturday 28th June 2026
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MENU SECTION                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="menu">
+    <p class="section-label reveal">Dinner Menu</p>
+    <h2 class="section-title reveal">An Evening of<br />Local Flavours</h2>
+    <div class="ornament">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+
+    <div class="menu-plate reveal">
+      <span class="menu-icon">🦞</span>
+      <h3 class="menu-title">Local Cuisine — All Seafood</h3>
+      <p class="menu-desc">A bountiful feast honouring the coastal heritage of Hula Village</p>
+      <ul class="menu-items">
+        <li><span class="dot">◆</span> Freshly caught local seafood selection</li>
+        <li><span class="dot">◆</span> Traditional Papua New Guinean coastal dishes</li>
+        <li><span class="dot">◆</span> Prepared in authentic local style</li>
+        <li><span class="dot">◆</span> Celebrating the flavours of the sea</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- GALLERY STRIP                                               -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="gallery">
+    <div class="gallery-strip">
+      <div class="gallery-panel">
+        <img src="memorial.png" alt="Dr W.G. Lawes Memorial Stone" />
+        <div class="gallery-panel-overlay">
+          <div class="gallery-panel-title">Dr W.G. Lawes Memorial Stone</div>
+          <div class="gallery-panel-sub">Vula'a Iruna · Hula Village</div>
+        </div>
+      </div>
+      <div class="gallery-panel">
+        <img src="inner.png" alt="150 Years Missionary Anniversary" style="object-position: right center;" />
+        <div class="gallery-panel-overlay">
+          <div class="gallery-panel-title">150 Years of the Gospel</div>
+          <div class="gallery-panel-sub">Hula Village · 1876 – 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- CTA / CONTACT                                               -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <p class="section-label reveal">Reserve Your Table</p>
+      <h2 class="cta-headline reveal">Join Us for an<br />Unforgettable Evening</h2>
+      <p class="cta-sub reveal">RSVP via WhatsApp to secure your table of ten</p>
+
+      <div class="ornament reveal">
+        <div class="ornament-diamond"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-diamond"></div>
+      </div>
+
+      <div class="contacts-grid" style="margin-top:50px;">
+        <div class="contact-card reveal">
+          <div class="contact-name">
+            <span class="title-prefix">Reverend</span>
+            Kila Apae Walo
+          </div>
+          <a class="contact-phone-btn" href="https://wa.me/67572528976" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            (+675) 72528976
+          </a>
+        </div>
+
+        <div class="contact-card reveal reveal-delay-1">
+          <div class="contact-name">
+            <span class="title-prefix">Organiser</span>
+            Cliff Kala
+          </div>
+          <a class="contact-phone-btn" href="https://wa.me/67577755367" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            (+675) 77755367
+          </a>
+        </div>
+
+        <div class="contact-card reveal reveal-delay-2">
+          <div class="contact-name">
+            <span class="title-prefix">Organiser</span>
+            Ravu Kala
+          </div>
+          <a class="contact-phone-btn" href="https://wa.me/67576402663" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            (+675) 76402663
+          </a>
+        </div>
+      </div>
+
+      <a class="cta-main-btn reveal" href="https://wa.me/67572528976?text=I%20would%20like%20to%20RSVP%20for%20the%20150th%20Missionary%20Anniversary%20Corporate%20Dinner%20on%2025th%20April%202026" target="_blank" rel="noopener">
+        Reserve My Table
+      </a>
+
+      <p class="rsvp-note reveal">
+        <strong>Table for Ten: K5,000.00</strong> · RSVP via WhatsApp · Limited tables available
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-badge">
+      <img src="badge_right.png" alt="150th Anniversary" />
+    </div>
+    <p class="footer-title">150th Missionary Anniversary</p>
+    <p class="footer-sub">Hula Village · Papua New Guinea · 1876 – 2026</p>
+    <div class="footer-divider"></div>
+    <p class="footer-copy">Corporate Dinner · Saturday 25th April 2026 · Sir John Guise Sports Complex</p>
+    <p class="footer-copy" style="margin-top:8px;">Anniversary Celebration Week · 23rd – 28th June 2026</p>
+  </footer>
+
+  <!-- ─── JS ──────────────────────────────────────────────────── -->
+  <script>
+    // Intersection Observer for scroll reveals
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Sticky RSVP button visibility
+    const stickyBtn = document.getElementById('stickyRsvp');
+    window.addEventListener('scroll', () => {
+      stickyBtn.classList.toggle('visible', window.scrollY > 500);
+    }, { passive: true });
+  </script>
+</body>
+</html>
